@@ -20,15 +20,8 @@ export default function Home() {
     const mnemonic = generateMnemonic();
     setMnemonics(mnemonic);
   }
-  console.log(mnemonics);
   const seeds = mnemonics.split(" ");
-  console.log(seeds);
-  const box = <div className="flex gap-6">
-  {mnemonics && <EthWallet mnemonic={mnemonics} />}
-  <div className="h-40 w-[1px] bg-white "></div>
-  {mnemonics && <SolanaWallet mnemonic={mnemonics} />}
-  
-</div>
+
   return (
     <div className="bg-black min-h-screen text-white flex flex-col justify-center items-center gap-7 py-10 ">
       <h1 className="text-5xl font-[Sniglet]">Create a Wallet in 2 Clicks</h1>
